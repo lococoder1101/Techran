@@ -27,7 +27,6 @@ export class NewsComponent implements OnInit {
   }
 
   getAutorProfile(userId: any) {
-
     for(let i=0; i<this.authors.length; i++){
     if (userId===this.authors[i].id){
       return this.authors[i].name ;
