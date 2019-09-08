@@ -15,6 +15,9 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
 import {NgbTypeaheadModule} from "@ng-bootstrap/ng-bootstrap";
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import {NgbTypeaheadModule} from "@ng-bootstrap/ng-bootstrap";
     HttpClientModule,
     RouterModule,
     FormsModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
     NgbTypeaheadModule
   ],
   providers: [],
