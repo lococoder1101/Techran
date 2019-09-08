@@ -13,6 +13,9 @@ export class DataService {
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
 
   }
+  getAuthor(){
+    return this.http.get('https://jsonplaceholder.typicode.com/users')
+  }
 
 
 }

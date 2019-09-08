@@ -8,6 +8,8 @@ import { DataService } from '../data.service';
 })
 export class NewsComponent implements OnInit {
    news: Object;
+   authors;
+  private json: any;
 
   constructor(private data: DataService) { }
 
@@ -17,7 +19,19 @@ export class NewsComponent implements OnInit {
         console.log(this.news);
       }
     );
+    this.data.getAuthor().subscribe(data => {
+        this.authors = data
+        console.log(this.authors);
+      }
+    );
   }
-  firstClick() {
+
+  getAutorProfile(userId: any) {
+
+    for(let i=0; i<this.authors.length; i++){
+    if (userId===this.authors[i].id){
+      return this.authors[i].name ;
+    }
+    };
   }
 }
