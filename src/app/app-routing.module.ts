@@ -7,7 +7,7 @@ import {ContactComponent} from "./contact/contact.component";
 
 const routes: Routes = [
   { path: '', component: NewsComponent },
-  { path: 'author', component: AuthorComponent },
+  { path: 'author/:id', component: AuthorComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'authors', component: AuthorComponent },
 

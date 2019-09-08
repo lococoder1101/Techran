@@ -11,7 +11,6 @@ import {debounceTime, map} from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit {
   public model: any;
-  authorId:any;
 
 
   // @ts-ignore
@@ -52,8 +51,5 @@ addElement(name: string, image: string) {
     return this.dataService.getProfileImage(userId);
   }
 
-  selectedAuthorId(id: any) {
-    this.authorId=id;
-  }
 }
 
