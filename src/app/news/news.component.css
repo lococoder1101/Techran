@@ -17,5 +17,8 @@ ul li p {
 }
 ul li img {
   border-radius: 50%;
-  width: 100%;
+  width: 4%;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-left: 5px;
 }

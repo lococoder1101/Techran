@@ -8,7 +8,8 @@
     <br>
     <br>
     <div *ngIf="authors">
-    <span style="font-size: 12px">Author: {{getAutorProfile(post.userId)}}</span>
+      <img src='{{getProfileImages(post.userId)}}'>
+    <span style="font-size: 12px">{{getAutorProfile(post.userId)}}</span>
     </div>
   </li>
 </ul>

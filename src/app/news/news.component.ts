@@ -34,4 +34,8 @@ export class NewsComponent implements OnInit {
     }
     };
   }
+
+  getProfileImages(userId:any){
+    return this.data.getProfileImage(userId);
+  }
 }
