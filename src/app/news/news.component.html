@@ -1,1 +1,14 @@
 <p>news works!</p>
+<ul *ngIf="news">
+  <li *ngFor="let post of news">
+<!--    <img [src]="user.avatar">-->
+    <span>{{post.id}}</span>
+    <br>
+    <strong style="color: red">{{ post.title }}</strong>
+    <br>
+    <p> {{ post.body }}</p>
+    <br>
+    <span>Author: {{post.userId}}</span>
+  </li>
+</ul>
+<button (click)="firstClick()">Click me</button>

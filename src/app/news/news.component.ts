@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-news',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+   news: Object;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getNews().subscribe(data => {
+        this.news = data
+        console.log(this.news);
+      }
+    );
   }
-
+  firstClick() {
+  }
 }
