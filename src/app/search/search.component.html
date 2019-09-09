@@ -1,21 +1,16 @@
-    <br>
-<ng-template #rt let-r="result" let-t="term">
-
-  <a  [routerLink]="['/author', r.id]">
-    <img [src]='getProfileImages(r.id)' class="mr-1" style="width: 16px">
-    <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
-    <br>
+<ng-template #rt let-r="result" let-t="term" >
+  <a  [routerLink]="['/author', r.id]" style="color: #212121;text-decoration: none" >
+    <img [src]='getProfileImages(r.id)' class="mr-1" style="width: 35px">
+    <ngb-highlight [result]="r.name"  [term]="t" >{{highlightAuthor===r.id}}</ngb-highlight>
   </a>
 </ng-template>
     <br>
 
-<input id="typeahead-template" type="text" class="form-control " (keyup.enter)=addElement(model.name,model.image)
-       [(ngModel)]="model" [ngbTypeahead]="search "
+<input id="typeahead-template"  type="text" class="form-control " (keyup.enter)=goToAuthorPage(model.id)
+       [(ngModel)]="model"
+       [ngbTypeahead]="search "
        [resultTemplate]="rt"
-
        [inputFormatter]="formatter "/>
-<!--<pre>Model: {{ model | json}}</pre>-->
-
 <div>
   <ul style="display:inline-block" class="list-inline" #div></ul>
 </div>
