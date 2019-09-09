@@ -1,12 +1,14 @@
-<header>
-  <div class="container">
-    <a routerLink="/">{{ appTitle }}</a>
-    <nav>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/authors">Authors</a></li>
-        <li><a routerLink="/contact">Contact us</a></li>
-      </ul>
-    </nav>
+  <div class="topnav">
+    <a routerLink="/" id="appTitle">{{ appTitle }}</a>
+    <div id="myLinks">
+      <a routerLink="/" onclick="closeMenu()">Home</a>
+      <a routerLink="/authors" onclick="closeMenu()">Authors</a>
+      <a routerLink="/contact" onclick="closeMenu()">Contact us</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="header()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
-</header>
+
+
+

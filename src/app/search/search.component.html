@@ -9,7 +9,7 @@
 </ng-template>
     <br>
 
-<input id="typeahead-template" type="text" class="form-control" (keyup.enter)=addElement(model.name,model.image)
+<input id="typeahead-template" type="text" class="form-control " (keyup.enter)=addElement(model.name,model.image)
        [(ngModel)]="model" [ngbTypeahead]="search "
        [resultTemplate]="rt"
 
