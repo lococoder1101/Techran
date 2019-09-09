@@ -10,8 +10,9 @@ import {DataService} from "../data.service";
 export class AuthorComponent implements OnInit {
   id: any;
   authors;
+  selectedPost;
   news:any;
-  author:Object;
+  author;
    userId: any;
    authorsNews:any=[];
 
@@ -46,7 +47,7 @@ export class AuthorComponent implements OnInit {
     return this.data.getProfileImage(userId);
   }
 
-  postDetail() {
-    
+  postDetail(post: any) {
+    alert(this.author.email+' '+post.body)
   }
 }
