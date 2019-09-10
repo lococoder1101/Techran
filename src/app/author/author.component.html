@@ -1,176 +1,142 @@
-
-<div class="container emp-profile" style="background-color: #00c6ff;">
+<br>
+<div class=" emp-profile" style="background-color: #EEEEEE">
   <form method="post">
     <div class="row">
-      <div class="col-md-4">
+
+      <div class="col-md-3 ">
         <div class="profile-img">
-          <img src="{{getProfileImages(author.id)}}" alt=""/>
+          <img style="border-radius: 50%" src="{{getProfileImages(author.id)}}" alt=""/>
         </div>
       </div>
-      <div class="col-md-6">
+
+      <div class="col-md-4 " >
         <div class="profile-head">
-          <h5>
+          <h3 >
             {{ author.username}}
-          </h5>
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                 aria-selected="true">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                 aria-selected="false">Timeline</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Send Message"/>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="profile-work">
-          <p>WORK LINK</p>
-          <a href="{{ author.website}}">Website Link</a><br/>
-
-
-          <p>SKILLS</p>
-          <a href="">Web Designer</a><br/>
-
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="tab-content profile-tab" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="row">
-              <div class="col-md-6">
-                <label>User Id</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{ author.id}}</p>
-              </div>
+          </h3>
+          <br>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Name</label>
             </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <label>Name</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{ author.name}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label>Email</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{ author.email}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label>Phone</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{ author.phone}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label>Address</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{
-                  +author.address.suite
-                  + '-'
-                  + author.address.street
-                  + '-'
-                  + author.address.city
-                  + '-'
-                  + author.address.zipcode
-                  }}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label>Company</label>
-              </div>
-              <div class="col-md-6">
-                <p>{{author.company.name}}</p>
-                <p>Catch Phrase :{{author.company.catchPhrase}}</p>
-                <p>BS :{{author.company.bs}}</p>
-              </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.name}}</p>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-6">-->
-            <!--                <label>Experience</label>-->
-            <!--              </div>-->
-            <!--              <div class="col-md-6">-->
-            <!--                <p>Expert</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-6">-->
-            <!--                <label>Hourly Rate</label>-->
-            <!--              </div>-->
-            <!--              <div class="col-md-6">-->
-            <!--                <p>10$/hr</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-6">-->
-            <!--                <label>Total Projects</label>-->
-            <!--              </div>-->
-            <!--              <div class="col-md-6">-->
-            <!--                <p>230</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-6">-->
-            <!--                <label>English Level</label>-->
-            <!--              </div>-->
-            <!--              <div class="col-md-6">-->
-            <!--                <p>Expert</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-6">-->
-            <!--                <label>Availability</label>-->
-            <!--              </div>-->
-            <!--              <div class="col-md-6">-->
-            <!--                <p>6 months</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!--            <div class="row">-->
-            <!--              <div class="col-md-12">-->
-            <!--                <label>Your Bio</label><br/>-->
-            <!--                <p>Your detail description</p>-->
-            <!--              </div>-->
-            <!--            </div>-->
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Email</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.email}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Phone</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.phone}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Company</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">                <span class="detail">{{author.company.name}}</span>
+<!--                <br>-->
+<!--                <span  class="detail" style="font-weight: 500">Catch Phrase :{{author.company.catchPhrase}}</span>-->
+<!--                <br>-->
+<!--                <span  class="detail" style="font-weight: 500">BS :{{author.company.bs}}</span></p>-->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">BS</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.company.bs}}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="col-md-5 " >
+        <div class="profile-head">
+          <h3 style="color: #EEEEEE;">
+            {{ author.username}}
+          </h3>
+          <br>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">User Id</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.id}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">LINK</label>
+            </div>
+            <div class="col-md-10">
+                        <a href="http://{{ author.website}}" class="detail">Website Link</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Address</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail"><span  class="detail">{{
+                +author.address.suite
+                + '-'
+                + author.address.street
+                + '-'
+                + author.address.city
+                + '-'
+                + author.address.zipcode
+                }}</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Location</label>
+            </div>
+            <div class="col-md-10">
+              <a
+                href="https://maps.google.com/maps?q={{author.address.geo.lat}},{{author.address.geo.lng}}"
+                style="color:#0000FF;text-align:left"
+                target="_blank"
+              >
+                See on map
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label class="myLable">Catch</label>
+            </div>
+            <div class="col-md-10">
+              <p class="detail">{{ author.company.catchPhrase}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+
   </form>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
 <!--=====================================================================================-->
+<div style="width: 80%;margin: 0 auto">
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+</div>
 
 
 <table id="myTable" class="table table-striped table-light" *ngIf="authorsNews">
@@ -183,11 +149,12 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let post of authorsNews" (click)="selectedPost=post" onclick="document.getElementById('id01').style.display='block'">
-      <th scope="row">{{ post.id }}</th>
-      <td>{{ post.title }}</td>
-      <td>{{ post.body | slice:0:20}}...</td>
-    </tr>
+  <tr *ngFor="let post of authorsNews" (click)="selectedPost=post"
+      onclick="document.getElementById('id01').style.display='block'">
+    <th scope="row">{{ post.id }}</th>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body | slice:0:20}}...</td>
+  </tr>
 
   </tbody>
 

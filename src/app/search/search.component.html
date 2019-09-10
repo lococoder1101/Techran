@@ -5,12 +5,20 @@
   </a>
 </ng-template>
     <br>
+<div class="form-group has-search">
+  <span class="fa fa-search form-control-feedback"></span>
+  <input id="typeahead-template" type="text" class="form-control" placeholder="Search Authors" (keyup.enter)=goToAuthorPage(model.id)
+         [(ngModel)]="model"
+         [ngbTypeahead]="search "
+         [resultTemplate]="rt"
+         [inputFormatter]="formatter ">
+</div>
+<!--<input id="typeahead-template"   type="text" class="form-control " (keyup.enter)=goToAuthorPage(model.id)-->
+<!--       [(ngModel)]="model"-->
+<!--       [ngbTypeahead]="search "-->
+<!--       [resultTemplate]="rt"-->
+<!--       [inputFormatter]="formatter "/>-->
 
-<input id="typeahead-template"  type="text" class="form-control " (keyup.enter)=goToAuthorPage(model.id)
-       [(ngModel)]="model"
-       [ngbTypeahead]="search "
-       [resultTemplate]="rt"
-       [inputFormatter]="formatter "/>
 <div>
   <ul style="display:inline-block" class="list-inline" #div></ul>
 </div>

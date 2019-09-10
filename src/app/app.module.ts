@@ -18,6 +18,7 @@ import {NgbTypeaheadModule} from "@ng-bootstrap/ng-bootstrap";
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FooterComponent,
     NewsComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

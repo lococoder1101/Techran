@@ -1,0 +1,19 @@
+<div style="width: 80% ;margin: 0 auto">
+<br>
+  <p>All Published Posts</p>
+<ul *ngIf="news">
+  <li *ngFor="let post of news" style="background-color:#B0BEC5 ">
+    <h1 style="color: darkslateblue;font-size: 16px">{{ post.title }}</h1>
+    <br>
+    <br>
+    <span style="font-size: 14px"> {{ post.body }}</span>
+    <br>
+    <br>
+    <br>
+    <div *ngIf="authors">
+      <img src='{{getProfileImages(post.userId)}}'>
+      <span style="font-size: 12px">{{getAutorProfile(post.userId)}}</span>
+    </div>
+  </li>
+</ul>
+</div>
