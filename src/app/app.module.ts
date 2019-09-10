@@ -19,6 +19,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PostsComponent } from './posts/posts.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PostsComponent } from './posts/posts.component';
     NewsComponent,
     ContactComponent,
     SearchComponent,
-    PostsComponent
+    PostsComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,

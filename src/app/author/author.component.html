@@ -1,4 +1,4 @@
-<br>
+<br id="#myHeader">
 <div class=" emp-profile" style="background-color: #EEEEEE">
   <form method="post">
     <div class="row">
@@ -9,9 +9,9 @@
         </div>
       </div>
 
-      <div class="col-md-4 " >
+      <div class="col-md-4 ">
         <div class="profile-head">
-          <h3 >
+          <h3>
             {{ author.username}}
           </h3>
           <br>
@@ -44,11 +44,11 @@
               <label class="myLable">Company</label>
             </div>
             <div class="col-md-10">
-              <p class="detail">                <span class="detail">{{author.company.name}}</span>
-<!--                <br>-->
-<!--                <span  class="detail" style="font-weight: 500">Catch Phrase :{{author.company.catchPhrase}}</span>-->
-<!--                <br>-->
-<!--                <span  class="detail" style="font-weight: 500">BS :{{author.company.bs}}</span></p>-->
+              <p class="detail"><span class="detail">{{author.company.name}}</span>
+                <!--                <br>-->
+                <!--                <span  class="detail" style="font-weight: 500">Catch Phrase :{{author.company.catchPhrase}}</span>-->
+                <!--                <br>-->
+                <!--                <span  class="detail" style="font-weight: 500">BS :{{author.company.bs}}</span></p>-->
             </div>
           </div>
 
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="col-md-5 " >
+      <div class="col-md-5 ">
         <div class="profile-head">
           <h3 style="color: #EEEEEE;">
             {{ author.username}}
@@ -82,7 +82,7 @@
               <label class="myLable">LINK</label>
             </div>
             <div class="col-md-10">
-                        <a href="http://{{ author.website}}" class="detail">Website Link</a>
+              <a href="http://{{ author.website}}" class="detail">Website Link</a>
             </div>
           </div>
           <div class="row">
@@ -90,7 +90,7 @@
               <label class="myLable">Address</label>
             </div>
             <div class="col-md-10">
-              <p class="detail"><span  class="detail">{{
+              <p class="detail"><span class="detail">{{
                 +author.address.suite
                 + '-'
                 + author.address.street
@@ -126,20 +126,21 @@
         </div>
       </div>
 
-
-
-      </div>
+    </div>
 
   </form>
 </div>
+<hr><br>
 <!--=====================================================================================-->
-<div style="width: 80%;margin: 0 auto">
-
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<div style="width: 60%;margin: 0 auto">
+<!--  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search title" title="Type in a name">-->
+<div class="form-group has-search">
+  <span class="fa fa-search form-control-feedback"></span>
+  <input id="myInput" type="text" class="form-control" onkeyup="myFunction()" placeholder="Search title" title="Type in a name" >
+</div>
 </div>
 
-
-<table id="myTable" class="table table-striped table-light" *ngIf="authorsNews">
+<table id="myTable" class="table table-striped table-light" *ngIf="authorsNews" style="width: 80%;margin: 0 auto">
   <thead>
   <tr>
     <th scope="col">id</th>
@@ -160,20 +161,26 @@
 
 </table>
 
+<br>
+<br>
+<br>
+
+
 
 <div id="id01" class="w3-modal">
-  <div class="w3-modal-content">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+
     <header class="w3-container w3-teal">
-        <span onclick="document.getElementById('id01').style.display='none'"
+        <span style="font-size: 10px" onclick="document.getElementById('id01').style.display='none'"
               class="w3-button w3-display-topright">&times;</span>
-      <h2>{{selectedPost.title}}</h2>
+      <h5>{{selectedPost.title}}</h5>
     </header>
+
     <div class="w3-container">
-      <p>{{selectedPost.id}}</p>
-      <p>{{selectedPost.body}}</p>
+      <p style="margin-top: 12px;font-size: 15px">{{selectedPost.id}}-{{selectedPost.body}}</p>
     </div>
-    <footer class="w3-container w3-teal">
-      <p>Author: {{author.name}}</p>
+    <footer class="w3-container w3-teal" >
+      <span style="font-size: 12px" >Author: {{author.name}}</span>
     </footer>
   </div>
 </div>

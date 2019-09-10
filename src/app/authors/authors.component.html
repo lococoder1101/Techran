@@ -1,0 +1,13 @@
+<div style="width: 80%;margin: 0 auto">
+  <ul  style="list-style: none;display: flex;flex-direction: row;flex-wrap: wrap">
+    <li *ngFor="let post of authors" style="text-align: center;cursor: pointer" (click)=goToAuthorPage(post.id) >
+
+      <img style="border-radius: 50%;margin: 30px" src="{{getProfileImages(post.id)}}">
+      <br>
+      <span>{{post.username}}</span>
+      <br>
+      <br>
+      <br>
+    </li>
+  </ul>
+</div>
